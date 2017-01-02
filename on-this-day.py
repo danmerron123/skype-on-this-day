@@ -19,7 +19,7 @@ TEXT = MIMEText(fp.read())
 fp.close()
 
 FROM = 'skype@onthisday.co.uk'
-TO = ["danmerron@gmail.com"] # must be a list
+TO = ["toaddress"] # must be a list
 SUBJECT = "Skype On This Day Premium"
 
 message = """\
@@ -31,8 +31,8 @@ Subject: %s
 """ % (FROM, ", ".join(TO), SUBJECT, TEXT)
 
 # Send the mail
-username = 'danmerron@gmail.com'
-password = '3mailSecure!'
+username = 'user'
+password = 'pass!'
 server = smtplib.SMTP('smtp.gmail.com:587')
 server.starttls()
 server.login(username,password)
